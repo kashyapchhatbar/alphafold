@@ -58,6 +58,21 @@ MODEL_PRESETS = {
         'model_4_multimer_v3',
         'model_5_multimer_v3',
     ),
+    'multimer_1': (
+        'model_1_multimer_v3',
+    ),
+    'multimer_2': (
+        'model_2_multimer_v3',
+    ),
+    'multimer_3': (
+        'model_3_multimer_v3',
+    ),
+    'multimer_4': (
+        'model_4_multimer_v3',
+    ),
+    'multimer_5': (
+        'model_5_multimer_v3',
+    ),
 }
 MODEL_PRESETS['monomer_casp14'] = MODEL_PRESETS['monomer']
 
