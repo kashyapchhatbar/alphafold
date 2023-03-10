@@ -105,7 +105,7 @@ flags.DEFINE_enum('db_preset', 'full_dbs',
 flags.DEFINE_enum('model_preset', 'monomer',
                   ['monomer', 'monomer_casp14', 'monomer_ptm', 'multimer', 
                    'multimer_1', 'multimer_2', 'multimer_3', 'multimer_4',
-                   'multimer_5],
+                   'multimer_5'],
                   'Choose preset model configuration - the monomer model, '
                   'the monomer model with extra ensembling, monomer model with '
                   'pTM head, or multimer model')
