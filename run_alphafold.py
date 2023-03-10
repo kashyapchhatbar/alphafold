@@ -103,7 +103,9 @@ flags.DEFINE_enum('db_preset', 'full_dbs',
                   'smaller genetic database config (reduced_dbs) or '
                   'full genetic database config  (full_dbs)')
 flags.DEFINE_enum('model_preset', 'monomer',
-                  ['monomer', 'monomer_casp14', 'monomer_ptm', 'multimer'],
+                  ['monomer', 'monomer_casp14', 'monomer_ptm', 'multimer', 
+                   'multimer_1', 'multimer_2', 'multimer_3', 'multimer_4',
+                   'multimer_5],
                   'Choose preset model configuration - the monomer model, '
                   'the monomer model with extra ensembling, monomer model with '
                   'pTM head, or multimer model')
@@ -341,7 +343,7 @@ def main(argv):
   _check_flag('uniref30_database_path', 'db_preset',
               should_be_set=not use_small_bfd)
 
-  run_multimer_system = 'multimer' in FLAGS.model_preset
+  run_multimer_system = FLAGS.model_preset.startswith('multimer')
   _check_flag('pdb70_database_path', 'model_preset',
               should_be_set=not run_multimer_system)
   _check_flag('pdb_seqres_database_path', 'model_preset',
